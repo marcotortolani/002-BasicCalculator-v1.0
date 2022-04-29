@@ -5,36 +5,35 @@
 
 
 
-/*  :root{      /* Combinacion de colores DARK MODE */
-/*      
-/*      --font-family: Montserrat, sans-serif;
-/*      /* --font-family: 'Kanit', sans-serif; */
-/*      /* --font-family: 'Press Start 2P', cursive; */
-/*        
-/*      --backgroundVentana: rgb(39, 37, 39);
-/*      --backgroundCalc: rgb(32, 32, 32);
-/*      --colorPantalla: rgb(13, 13, 13);
-/*      --colorBotones: rgb(65, 68, 70);
-/*      --colorFuente: rgb(193, 217, 237);
-/*      --colorFuenteBotonesModo: rgb(40, 171, 171);
-/*      --colorFuenteBotonesArit: rgb(199, 20, 20);
-/*  }
-*/
-
-:root{      /* Combinacion de colores LIGHT MODE */
-    --font-family: Montserrat, sans-serif;
+:root{      /* Combinacion de colores DARK MODE */
     
-
-    --backgroundVentana: rgb(216, 216, 216);
-    --backgroundCalc: rgb(230, 230, 230);
-    --colorPantalla: rgb(250, 250, 250);
-    --colorBotones: rgb(225, 225, 225);
-    --colorFuente: rgb(55, 84, 98);
-    --colorFuenteBotonesModo: rgb(78, 171, 171);
-    --colorFuenteBotonesArit: rgb(235, 22, 22);
+    --font-family: Montserrat, sans-serif;
+    /* --font-family: 'Kanit', sans-serif; */
+    /* --font-family: 'Press Start 2P', cursive; */
+      
+    --backgroundVentana: rgb(39, 37, 39);
+    --backgroundCalc: rgb(32, 32, 32);
+    --colorPantalla: rgb(13, 13, 13);
+    --colorBotones: rgb(65, 68, 70);
+    --colorFuente: rgb(193, 217, 237);
+    --colorFuenteBotonesModo: rgb(40, 171, 171);
+    --colorFuenteBotonesArit: rgb(199, 20, 20);
 }
 
-
+/* :root{      /* Combinacion de colores LIGHT MODE */
+/*     --font-family: Montserrat, sans-serif;
+/*     
+/* 
+/*     --backgroundVentana: rgb(216, 216, 216);
+/*     --backgroundCalc: rgb(230, 230, 230);
+/*     --colorPantalla: rgb(250, 250, 250);
+/*     --colorBotones: rgb(225, 225, 225);
+/*     --colorFuente: rgb(55, 84, 98);
+/*     --colorFuenteBotonesModo: rgb(78, 171, 171);
+/*     --colorFuenteBotonesArit: rgb(235, 22, 22);
+/* }
+/* 
+*/
 
 body{
     display: flex;
@@ -94,6 +93,170 @@ h1 a{
 } */
 
 
+body {
+    padding: 50px;
+  }
+  
+  .switch {
+    /* display: inline-block; */
+    display: flex;
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .switch__input {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
+  
+  .switch__label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #2b2b2b;
+    border: 5px solid #5b5b5b;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
+  
+  .switch__indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-72%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #7b7b7b;
+    border-radius: 9999px;
+    box-shadow: 10px 0px 0 0 rgba(0, 0, 0, 0.2) inset;
+  }
+  /* .switch__indicator::before, .switch__indicator::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    border-radius: 9999px;
+  } */
+  .switch__indicator::before {
+    top: 7px;
+    left: 7px;
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+  .switch__indicator::after {
+    bottom: 8px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    opacity: 0.8;
+  }
+  
+  /* .switch__decoration {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    animation: twinkle 0.8s infinite -0.6s;
+  }
+  .switch__decoration::before, .switch__decoration::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+  }
+  .switch__decoration::before {
+    top: -20px;
+    left: 10px;
+    opacity: 1;
+    animation: twinkle 0.6s infinite;
+  }
+  .switch__decoration::after {
+    top: -7px;
+    left: 30px;
+    animation: twinkle 0.6s infinite -0.2s;
+  }
+   */
+  @keyframes twinkle {
+    50% {
+      opacity: 0.2;
+    }
+  }
+  .switch__indicator, .switch__indicator::before, .switch__indicator::after {
+    transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  }
+  
+  .switch__input:checked + .switch__label {
+    background-color: #8fb5f5;
+    border-color: #347cf8;
+  }
+  .switch__input:checked + .switch__label .switch__indicator {
+    background-color: #ecd21f;
+    box-shadow: none;
+    transform: translate(-50%, -50%) translateX(72%);
+  }
+  .switch__input:checked + .switch__label .switch__indicator::before, .switch__input:checked + .switch__label .switch__indicator::after {
+    display: none;
+  }
+  .switch__input:checked + .switch__label .switch__decoration {
+    top: 50%;
+    transform: translate(0%, -50%);
+    animation: cloud 8s linear infinite;
+    width: 20px;
+    height: 20px;
+  }
+  .switch__input:checked + .switch__label .switch__decoration::before {
+    width: 10px;
+    height: 10px;
+    top: auto;
+    bottom: 0;
+    left: -8px;
+    animation: none;
+  }
+  .switch__input:checked + .switch__label .switch__decoration::after {
+    width: 15px;
+    height: 15px;
+    top: auto;
+    bottom: 0;
+    left: 16px;
+    animation: none;
+  }
+  .switch__input:checked + .switch__label .switch__decoration, .switch__input:checked + .switch__label .switch__decoration::before, .switch__input:checked + .switch__label .switch__decoration::after {
+    border-radius: 9999px 9999px 0 0;
+  }
+  .switch__input:checked + .switch__label .switch__decoration::after {
+    border-bottom-right-radius: 9999px;
+  }
+  
+  @keyframes cloud {
+    0% {
+      transform: translate(0%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(0%, -50%);
+    }
+  }
 
 
 
@@ -173,7 +336,7 @@ input {
 }
 
 .lineaSub{
-    width: 60%;
+    width: 50%;
     height: 4px;
     border-radius: 2px;
     margin-bottom: 20px;
