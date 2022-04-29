@@ -205,11 +205,11 @@ body {
   }
   
   .switch__input:checked + .switch__label {
-    background-color: #8fb5f5;
-    border-color: #347cf8;
+    background-color: #b9cdf1;
+    border-color: #6e96da;
   }
   .switch__input:checked + .switch__label .switch__indicator {
-    background-color: #ecd21f;
+    background-color: #f0e495;
     box-shadow: none;
     transform: translate(-50%, -50%) translateX(72%);
   }
