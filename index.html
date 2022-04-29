@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calc <a href="https://www.google.com.ar">by Tiburcio</a></h1>
+        
+
+        <div class="pantalla">
+            <div class="darkMode">
+                <input class="checkMode" type="checkbox" onclick="switchDarkMode(this)" name="" id="switchDarkLight">
+                
+
+            </div>
+
+            <div class="numerosDisplay">
+                <div class="cuenta">
+                    <h5>325 x 5</h5>
+                </div>
+                <div class="resultado">
+                    <h3>1625</h3>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="contBotones">
+            <input class="botonModo" type="button" value="C" id="botMod">
+            <input class="botonModo" type="button" value="( )" id="botMod2">
+            <input class="botonModo" type="button" value="%" id="botMod3">
+            <input class="botonArit" type="button" value="/" id="dividir">
+            <input class="boton" type="button" value="7" id="boton7">
+            <input class="boton" type="button" value="8" id="boton8">
+            <input class="boton" type="button" value="9" id="boton9">
+            <input class="botonArit" type="button" value="X" id="multiplicar">
+            <input class="boton" type="button" value="4" id="boton4">
+            <input class="boton" type="button" value="5" id="boton5">
+            <input class="boton" type="button" value="6" id="boton6">
+            <input class="botonArit" type="button" value="-" id="restar">
+            <input class="boton" type="button" value="1" id="boton1">
+            <input class="boton" type="button" value="2" id="boton2">
+            <input class="boton" type="button" value="3" id="boton3">
+            <input class="botonArit" type="button" value="+" id="sumar">
+            <input class="boton" type="button" value="+/-" id="signo">
+            <input class="boton" type="button" value="0" id="boton0">
+            <input class="boton" type="button" value="." id="PuntoDec">
+            <input class="botonArit" type="button" value="=" id="igual">
+        </div>
+        <div class="lineaSub"></div>
+    
+    </div>
+    
+
+    <script src="/index.js"></script>
+</body>
+</html>
