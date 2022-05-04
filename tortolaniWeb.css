@@ -1,19 +1,59 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-    --font: 
+    --fontTitulo: 'Oswald', sans-serif;
+    /* --font: 'Roboto', sans-serif; */
+    --font: 'Lexend Exa', sans-serif;
+    
+    --colorFondo: rgb(149, 151, 153);
+    --colorFondo2: rgb(184, 185, 185);
+    --colorTortolani: #08415C;
+    --colorContainer: #388697;
+
+    --colorSub: #996859;
+    --colorTexto: #08415C;
+
+    --colorTextSwitch: #119DA4;
 }
 
 
 body{
-    background-color: rgb(81, 142, 212);
+    background-color: var(--colorFondo);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+.container{
+    width: 70vw;
+    height: 100vh;
+    border: none;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: var(--colorFondo2);
 }
 
 h1{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    font-family: var(--fontTitulo);
+    font-size: 80px;
+    font-weight: 800;
+    color: var(--colorTortolani);
+}
+
+h1 span{
+    font-size: 0.58em;
+    font-weight: 600;
+    color: var(--colorDisenio);
+    
 }
 
 .switch {
@@ -26,9 +66,11 @@ h1{
     position: absolute;
     top: 14px;
     pointer-events: none;
-    font-family: 'Helvetica', Arial, sans-serif;
+    /* font-family: 'Helvetica', Arial, sans-serif; */
+    font-family: var(--font);
+
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
     width: 50%;
@@ -36,23 +78,27 @@ h1{
   }
   
   input.check-toggle-round-flat:checked ~ .off {
-    color: #F36F25;
+    /* color: #F36F25; */
+    color: var(--colorTextSwitch);
   }
   
   input.check-toggle-round-flat:checked ~ .on {
-    color: #fff;
+    /* color: #fff; */
+    color: var(--colorFondo2);
   }
   
   .switch > span.on {
     left: 0;
     padding-left: 2px;
-    color: #F36F25;
+    /* color: #F36F25; */
+    color: var(--colorTextSwitch);
   }
   
   .switch > span.off {
     right: 0;
     padding-right: 4px;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--colorFondo2);
   }
   
   .check-toggle {
@@ -73,9 +119,9 @@ h1{
   
   input.check-toggle-round-flat + label {
     padding: 2px;
-    width: 97px;
-    height: 35px;
-    background-color: #F36F25;
+    width: 98px;
+    height: 40px;
+    background-color: #4e799c;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
@@ -93,8 +139,9 @@ h1{
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color: #F36F25;
-    -webkit-
+    /* background-color: #F36F25; */
+    color: var(--colorBackSwitch);
+    
     
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
@@ -106,20 +153,20 @@ h1{
     left: 4px;
     bottom: 4px;
     width: 48px;
-    background-color: #fff;
-    -webkit-border-radius: 52px;
-    -moz-border-radius: 52px;
-    -ms-border-radius: 52px;
-    -o-border-radius: 52px;
-    border-radius: 52px;
+    background-color: rgb(253, 253, 253);
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
     -webkit-transition: margin 0.2s;
     -moz-transition: margin 0.2s;
     -o-transition: margin 0.2s;
     transition: margin 0.2s;
   }
   
-  input.check-toggle-round-flat:checked + label {
-  }
+  /* input.check-toggle-round-flat:checked + label {
+  } */
   
   input.check-toggle-round-flat:checked + label:after {
     margin-left: 44px;
@@ -128,16 +175,19 @@ h1{
 
  
 h3{
-    
-    background-color: aqua;
+    /* max-width: fit-content;
+    min-width: 200px; */
+    font-family: var();
+    font-size: 50px;
+    color: var(--colorSub);
+    justify-items: center;
 }
 
 p{
+    text-align: justify;
+    font-size: 30px;
+    max-width: 48vw;
+    justify-content: center;
+    color: var(--colorTexto);
 
-}
-
-.english{
-    
-    background-color: #b925f3;
-    
 }
