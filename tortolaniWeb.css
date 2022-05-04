@@ -126,9 +126,9 @@ h1{
   }
 
 
-
+ 
 h3{
-    display:flex;
+    
     background-color: aqua;
 }
 
@@ -137,6 +137,7 @@ p{
 }
 
 .english{
+    
     background-color: #b925f3;
     
 }
