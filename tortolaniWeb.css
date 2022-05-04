@@ -181,6 +181,7 @@ h3{
     font-size: 50px;
     color: var(--colorSub);
     justify-items: center;
+    padding: 10%;
 }
 
 p{
