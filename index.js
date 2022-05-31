@@ -14,7 +14,7 @@ function switchDarkMode(checkBox){
     if(checkBox.checked){
         //activar Modo Claro / activate Light Mode
         document.documentElement.style.setProperty('--backgroundVentana', 'rgb(216, 216, 216)');
-        document.documentElement.style.setProperty('--backgroundCalc', 'rgb(230, 230, 230)');
+        document.documentElement.style.setProperty('--backgroundCalc', 'rgb(230, 230, 230)');        
         document.documentElement.style.setProperty('--colorPantalla', 'rgb(250, 250, 250)');
         document.documentElement.style.setProperty('--colorBotones', 'rgb(210, 210, 210)');
         document.documentElement.style.setProperty('--colorFuente', 'rgb(55, 84, 98)');
@@ -108,7 +108,7 @@ function funny (){
     setTimeout(() => {
         document.querySelector("h3").innerText = "";
         document.querySelector("h5").innerText = "";
-    }, 2000);
+    }, 1000);
     primerNum=0;
     segundoNum=0;
 

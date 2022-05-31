@@ -156,19 +156,40 @@ h1{
     margin-left: 44px;
   }
 
+/* .containerGracias{
 
+} */
+
+.container-gracias{
+  display: inline;
+  width: 60vw;
+  
+  
+}
+
+.esp-subtitle {
+  display: flex;
+  
  
+}
+
 h3{
-    max-width: fit-content;
-    min-width: 200px;
+    
+    /* max-width: 60vw;
+    min-width: 200px; */
+    flex-wrap: wrap;
     font-family: var();
     font-size: 2rem;
     color: var(--colorSub);
     justify-items: center;
-    padding: 20px;
+    justify-content: center;
+    padding: 0px;
     margin-top: 0px;
-    margin-left: 10px;
+    margin: 0px 10px;
 }
+
+
+
 
 p{
     text-align: justify;
