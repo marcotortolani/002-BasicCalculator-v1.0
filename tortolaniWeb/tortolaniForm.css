@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --fontTitulo: 'Oswald', sans-serif;
+    --font: 'Lexend Exa', sans-serif;
+    
+    --colorFondo: rgb(149, 151, 153);
+    --colorFondo2: rgb(184, 185, 185);
+    --colorTortolani: #08415C;
+    --colorContainer: #388697;
+
+    --colorSub: #61433a;
+    --colorTexto: #07374d;
+
+    --colorTextSwitch: #119DA4;
+}
+
+
+body{
+    background: linear-gradient(337deg, #654ea3, #da98b4);
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    max-height: 100vh;
+    padding: 0px;
+    border: none;
+    margin: 0px;
+}
+.container{
+    width: 80vw;
+    min-height: 100vh;
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorFondo2);
+    background-color: rgba(42, 52, 95, 0.24);
+}
+
+.body a {
+    text-decoration: none;
+}
+
+.title {
+    margin-bottom: 60px;
+    margin-top: 30px;
+    font-family: var(--fontTitulo);
+    font-size: 80px;
+    font-weight: 800;
+    text-shadow: 5px 5px 10px #435f64a2;
+    color: var(--colorTortolani);
+}
+
+form {
+    margin: auto;
+    border-radius: 20%;
+    width: auto;
+    margin-bottom: 20vh;
+    height: 50vh;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  form input, form textarea {
+    width: 30vw;
+    min-width: 350px;
+    height: 40px;
+    margin-top: 30px;
+    padding: 0 24px;
+    border-radius: 60px;
+    font-family: var(--font);
+    font-size: 1rem;
+    word-spacing: 0px;
+    letter-spacing: 2px;
+    border-style: none;
+    background-color: rgba(233, 233, 233, 0.5);
+    cursor: text;
+    box-shadow: 10px 5px 32px 0px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: 10px 5px 32px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 10px 5px 32px 0px rgba(0, 0, 0, 0.42);
+  }
+  form input:focus-visible, form textarea:focus-visible {
+    outline: 1px solid rgba(0, 0, 0, 0);
+    background-color: #e5eff9;
+    
+  }
+  form div {
+    width: auto;
+    height: 0px;
+    margin: auto;
+    position: relative;
+    top: 0px;
+    left: 25px;
+    font-size: 0.9rem;
+  }
+  form textarea {
+    height: 30vh;
+    overflow-wrap: break-word;
+    padding: 20px 24px;
+    border-radius: 30px;
+    color: rgb(37, 38, 41);
+    text-align: justify;
+    word-break: keep-all;
+    resize: none;
+  }
+  form textarea::selection {
+    background-color: #bdbec3;
+    color: white;
+  }
+  form .submit {
+    width: 16vw;
+    min-width: 180px;
+    height: 5vh;
+    min-height: 40px;
+
+    margin: auto;
+    margin-top: 40px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    
+
+    color: #5ebce7;
+    background: rgba(42, 52, 95, 0.3);
+    box-shadow:  3px 3px 6px #444444,
+                  -3px -3px 6px #a7a7a781;
+
+  }
+  form .submit:hover {
+    color: #9bd4ee;
+    background: linear-gradient(-120deg, #33439c, #5f65a0);
+    background: rgba(42, 52, 95, 0.5);
+
+  }
+  form .submit:active {
+    transform: scale(0.9);
+  }
+  
+  .invalid {
+    color: rgb(255, 78, 46);
+  }
+  
+  .error {
+    border: solid 3px rgb(216, 19, 19);
+  }
+
+
+  /* Responsive mobile */
+
+@media screen and (max-width: 1200px) {
+  
+  
+}
+
+@media screen and (max-width: 950px) {
+  
+  form {
+    padding: 40px;
+  }
+  
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 645px) {
+  .container{
+    width: 90vw;
+  }
+  
+  form {
+    padding: 0px;
+    
+  }
+  form input, form textarea {
+    width: 50vw;
+    min-width: 250px;
+    
+  }
+}
+
+@media screen and (max-width: 580px) {
+  
+ 
+}
+
+@media screen and (max-width: 480px) {
+  .container{
+    width: 100vw;
+  }
+  .title {
+    font-size: 68px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    padding: 0px;
+  }
+  form input, form textarea {
+    width: 60vw;
+    min-width: 280px;
+    padding: 0 10px;
+  }
+  form textarea {
+    padding: 20px 10px;
+  }
+}

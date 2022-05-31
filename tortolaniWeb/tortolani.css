@@ -11,26 +11,29 @@
     --colorTortolani: #08415C;
     --colorContainer: #388697;
 
-    --colorSub: #996859;
-    --colorTexto: #08415C;
+    --colorSub: #61433a;
+    --colorTexto: #07374d;
 
     --colorTextSwitch: #119DA4;
 }
 
 
 body{
-    background-color: var(--colorFondo);
+    background: linear-gradient(337deg, #654ea3, #da98b4);
     font-family: var(--font);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: fit-content;
+    height: max-content;
     padding: 0px;
     border: none;
     margin: 0px;
 }
 
 .container{
-    width: 70vw;
+    width: 80vw;
     min-height: 100vh;
     height: 100%;
     border: none;
@@ -38,12 +41,16 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: var(--colorFondo2);
+    background-color: rgba(42, 52, 95, 0.24);
 }
 
-h1{
+.title {
+    margin: 40px;
+    
     font-family: var(--fontTitulo);
     font-size: 80px;
     font-weight: 800;
+    text-shadow: 5px 5px 10px #435f64a2;
     color: var(--colorTortolani);
 }
 
@@ -156,28 +163,16 @@ h1{
     margin-left: 44px;
   }
 
-/* .containerGracias{
-
-} */
-
 .container-gracias{
   display: inline;
   width: 60vw;
-  
-  
 }
 
 .esp-subtitle {
   display: flex;
-  
- 
 }
 
 h3{
-    
-    /* max-width: 60vw;
-    min-width: 200px; */
-    flex-wrap: wrap;
     font-family: var();
     font-size: 2rem;
     color: var(--colorSub);
@@ -204,22 +199,105 @@ p{
     margin: 20px;
 }
 
+.btn-contact{
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-contact button {
+  cursor: pointer;
+  width: 16vw;
+  min-width: 180px;
+  height: 5vh;
+  min-height: 40px;
+  border-radius: 100px;
+  border-style: none;
+  font-family: var(--font);
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #379ece;
+  background: rgba(42, 52, 95, 0.3);
+  box-shadow:  3px 3px 6px #444444,
+             -3px -3px 6px #a7a7a781;
+}
+
+.btn-contact button:hover {
+  color: var(--colorTexto);
+  color: #76c1e4;
+  background: linear-gradient(-120deg, #33439c, #5f65a0);
+  background: rgba(42, 52, 95, 0.5);
+}
+
 footer{
     display: flex;
     flex-wrap: wrap;
-    
     max-width: 80vw;
-    max-height: 12vh;
     justify-content: space-between;
-
 }
 
 .contact a{
     display: flex;
     justify-content: space-around;
-    
     width: 50px;
     height: 50px;
     padding: 0px 20px;
-    margin: 20px 20px;
+    margin: 20px;
 }
+
+/* Responsive mobile */
+
+@media screen and (max-width: 1380px) {
+  .btn-contact button {
+    font-size: 1.3rem;
+  }
+  
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 68px;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+    max-width: 60vw;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 645px) {
+  
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    width: 90vw;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .container {
+    width: 100vw;
+  }
+  
+  .title {
+    font-size: 60px;
+  }
+}
+

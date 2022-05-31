@@ -1,35 +1,32 @@
 
 
-const espTitle = document.querySelector('.esp-title');
 const espSubTitle = document.querySelector('.esp-subtitle');
 const espText = document.querySelector('.esp-text');
+const espButton = document.querySelector('.esp-contact');
 
-
-const engTitle = document.querySelector('.eng-title');
 const engSubTitle = document.querySelector('.eng-subtitle');
 const engText = document.querySelector('.eng-text');
+const engButton = document.querySelector('.eng-contact');
 
 
 
  function langSwitch(checkBox){
      if (checkBox.checked){
-        espTitle.style.setProperty('display', 'none');
         espSubTitle.style.setProperty('display', 'none');
         espText.style.setProperty('display', 'none');
+        espButton.classList.toggle('hidden');
 
-        engTitle.style.setProperty('display', 'flex');
         engSubTitle.style.setProperty('display', 'flex');
         engText.style.setProperty('display', 'flex');
+        engButton.classList.toggle('hidden');
                
      }else{
-        espTitle.style.setProperty('display', 'flex');
         espSubTitle.style.setProperty('display', 'flex');
         espText.style.setProperty('display', 'flex');
+        espButton.classList.toggle('hidden');
         
-        
-        engTitle.style.setProperty('display', 'none');
         engSubTitle.style.setProperty('display', 'none');
         engText.style.setProperty('display', 'none');
-        
+        engButton.classList.toggle('hidden');
      }
  }
